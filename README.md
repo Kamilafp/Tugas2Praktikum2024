@@ -23,6 +23,7 @@ Contoh :
 ![Lampiran Hasil](hasil.png)
 
 Jawaban:
+
 Prosesnya yaitu
 1. Pengambilan input dari form
    TextField digunakan untuk ambil input dari user dan TextEditingController untuk mengontrol     dan dapatkan input dari user. Input dari user akan disimpan di controller masing-masing,       contoh pada input nama
