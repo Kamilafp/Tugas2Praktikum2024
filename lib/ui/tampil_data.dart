@@ -15,16 +15,49 @@ class TampilData extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final int umur = DateTime.now().year - tahun;
+    final double screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Perkenalan"),
+        title: const Text("Perkenalan Mahasiswa"),
+        backgroundColor: Colors.lightBlue,
       ),
       body: Container(
         margin: const EdgeInsets.all(10),
-        child: Column(
-          children: [
-            Text("Nama saya $nama, NIM $nim, dan umur saya adalah $umur tahun"),
-          ],
+        child: Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8.0),
+            side: const BorderSide(color: Colors.lightBlue, width: 2.0),
+          ),
+          elevation: 2,
+          child: Container(
+            padding: const EdgeInsets.all(16.0),
+            width: double.infinity,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Halo!",
+                  style: const TextStyle(fontSize: 16),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  "Perkenalkan nama saya $nama",
+                  style: const TextStyle(fontSize: 16),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  "NIM $nim",
+                  style: const TextStyle(fontSize: 16),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  "Umur saya $umur tahun",
+                  style: const TextStyle(fontSize: 16),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
